@@ -118,7 +118,7 @@ RUN set -euo pipefail && \
       wget -O sass-embedded.tar.gz https://github.com/sass/dart-sass-embedded/releases/download/${DART_SASS_VERSION}/sass_embedded-${DART_SASS_VERSION}-linux-x64.tar.gz && \
       tar xf sass-embedded.tar.gz && \
       mv ./sass_embedded/dart-sass-embedded /usr/bin/ && \
-      chmod +xr /usr/bin/dart-sass-embedded && \
+      chmod 755 /usr/bin/dart-sass-embedded && \
       rm -rf sass-embedded.tar.gz sass_embedded; \
     fi && \
     # clean up some junk
