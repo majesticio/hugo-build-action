@@ -144,5 +144,5 @@ RUN set -euo pipefail && \
 # expose live-refresh server on default port
 EXPOSE 1313
 
-ENTRYPOINT ["hugo"]
+ENTRYPOINT ["cd ~; hugo"]
 
