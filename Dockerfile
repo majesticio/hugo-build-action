@@ -146,5 +146,5 @@ RUN git clone https://github.com/openaq/openaq.org.git; \
 # expose live-refresh server on default port
 EXPOSE 1313
 
-ENTRYPOINT ["cd ~; hugo"]
+ENTRYPOINT ["hugo"]
 
