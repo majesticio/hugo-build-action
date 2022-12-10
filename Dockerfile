@@ -138,8 +138,8 @@ RUN set -euo pipefail && \
     rst2html.py --version
 
 # add site source as volume
-VOLUME /src
-WORKDIR /src
+# VOLUME /src
+# WORKDIR /src
 
 # expose live-refresh server on default port
 EXPOSE 1313
