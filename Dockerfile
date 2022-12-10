@@ -138,9 +138,11 @@ RUN set -euo pipefail && \
     rst2html.py --version
 
 # add site source as volume
-# VOLUME /src
-# WORKDIR /src
-
+VOLUME /src
+WORKDIR /src
+RUN git clone https://github.com/openaq/openaq.org.git; \
+    cd openaq.org; \
+    git switch hugo && yarn;
 # expose live-refresh server on default port
 EXPOSE 1313
 
