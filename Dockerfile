@@ -44,7 +44,7 @@ RUN go build -v -ldflags "-X github.com/gohugoio/hugo/common/hugo.vendorInfo=doc
 
 # fix potential stack size problems on Alpine
 # https://github.com/microsoft/vscode-dev-containers/blob/fb63f7e016877e13535d4116b458d8f28012e87f/containers/hugo/.devcontainer/Dockerfile#L19
-RUN go install github.com/yaegashi/muslstack@latest && \
+RUN go install github.com/yaegashi/muslstack@master && \
     muslstack -s 0x800000 /go/bin/hugo
 
 # ---
