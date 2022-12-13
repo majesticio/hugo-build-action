@@ -119,8 +119,8 @@ RUN set -euo pipefail && \
       tar xf sass-embedded.tar.gz && \
       mv ./sass_embedded/dart-sass-embedded /usr/bin/ && \
       chmod 755 /usr/bin/dart-sass-embedded && \
-      chmod 755 /usr/bin/hugo && \
-      chmod /go/bin/hugo && \
+      chmod u+rx /usr/bin/hugo && \
+      chmod u+rx /go/bin/hugo && \
       rm -rf sass-embedded.tar.gz sass_embedded; \
     fi && \
     # clean up some junk
